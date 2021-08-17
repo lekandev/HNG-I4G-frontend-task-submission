@@ -28,8 +28,14 @@ h4 {
     margin-bottom: 20px;
 }
 
+img {
+    width: 110px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
 a {
-    color: #4DFEFC;
+    /* color: #4DFEFC; */
 }
 
 ul {
@@ -72,7 +78,7 @@ ul li {
 
 .resume {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     place-items: center;
     border-top: 1px solid #111;
     padding-top: 50px;
@@ -129,4 +135,35 @@ ul li {
 
 .experience__title {
     margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+    body {
+        margin: 40px;
+    }
+
+    .resume__left {
+        border-right: none;
+        border-bottom: 1px solid #111;
+        padding-bottom: 40px;
+    }
+
+    .resume__right {
+        padding-top: 40px;
+    }
+
+    .banner__name {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        letter-spacing: 0.4rem;
+    }
+
+    .banner__title {
+        font-size: 0.8rem;
+        letter-spacing: 0.4rem;
+        margin-bottom: 10px;
+    }
+
+    img {
+        width: 70px;
+    }
 }
